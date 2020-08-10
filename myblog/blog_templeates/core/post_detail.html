@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">{{object.title}}</h1>
+      <p class="lead">{{object.description}}</p>
+      <a class="btn btn-primary btn-lg" href="{% if object.get_absolute_url %}{{object.get_absolute_url}}{% endif %}" role="button">Learn more</a>
+    </div>
+  </div>
+{% endblock content %}
